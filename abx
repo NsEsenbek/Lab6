@@ -1,0 +1,35 @@
+1
+n = int(input())
+l = []
+for i in range(n):
+    l.append(int(input()))
+m = l[0]
+for i in range(1, n):
+    m *= l[i]
+print(m)
+
+2
+n = input()
+countu = 0
+countl = 0
+for c in n:
+    if ord('a') <= ord(c) <= ord('z'):
+        countl += 1
+    elif ord('A') <= ord(c) <= ord("Z"):
+        countu += 1
+print(countu, countl)
+
+3
+s = input()
+if len(s) % 2 != 0:
+    if s[0:len(s) // 2] == s[len(s) - 1:len(s) // 2:-1]:
+        print("YES")
+    else:
+        print("NO")
+else:
+    if s[0:len(s) // 2] == s[len(s) - 1:(len(s) // 2) - 1:-1]:
+        print("YES")
+    else:
+        print("NO")
+        
+      
